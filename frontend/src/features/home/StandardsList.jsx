@@ -28,8 +28,9 @@ export default function StandardsList({ standards }) {
     <>
       {standards.map((standard) => (
         <StandardCard
-          key={standard._id}
-          standard={standard}
+          key={standard._id || standard.title}
+          title={standard.title}
+          description={standard.description || standard.shortDescription}
         />
       ))}
     </>
