@@ -7,7 +7,7 @@ export default function StandardCard({ title, description }) {
         <h2 className="text-4xl font-medium text-gray-800">{title}</h2>
 
         <Link
-          href={`/standards/${title.toLowerCase().replace(/\s+/g, "-")}`}
+          href={`/standards/${title?.toLowerCase()?.replace(/\s+/g, "-") || "#"}`}
           className="text-gray-600 underline underline-offset-4 hover:text-red-500"
         >
           Read more
