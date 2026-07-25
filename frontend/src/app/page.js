@@ -9,8 +9,11 @@ export default async function HomePage() {
   return (
     <main className="min-h-screen bg-white">
       <Header />
-      <HeroSection />
-      <StandardsList standards={response.data} />
+
+      <div className="mx-auto max-w-7xl px-6">
+        <HeroSection />
+        <StandardsList standards={response.data} />
+      </div>
     </main>
   );
 }
